@@ -1,12 +1,12 @@
-import Button from '@/components/ui/button';
+import HomeHero from '@/components/home/home-hero';
+import TabsPane from '@/components/tabs-pane';
 
 const Home = () => {
     return (
-        <div className="h-[300px] bg-black-dark pt-24">
-            Home
-            <h1>Header</h1>
-            <Button>Request</Button>
-        </div>
+        <>
+            <HomeHero />
+            <TabsPane />
+        </>
     );
 };
 

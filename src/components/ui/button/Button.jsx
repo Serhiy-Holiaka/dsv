@@ -15,7 +15,7 @@ const Button = forwardRef(
             <button
                 ref={ref}
                 type={actionType}
-                className={`is-clickable button font-regular text-base text-white flex justify-center items-center bg-blue px-6 py-[18px] min-w-[105px] h-[52px] rounded-lg hover:bg-blue-600 hover:shadow-md  ${additionalClasses}`}
+                className={`is-clickable button font-regular text-base text-white flex justify-center items-center bg-blue px-6 py-[18px] min-w-[105px] h-[52px] rounded-lg hover:bg-blue-600 ${additionalClasses}`}
                 onClick={handleClick}
                 {...rest}
             >

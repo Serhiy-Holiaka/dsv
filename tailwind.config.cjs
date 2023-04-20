@@ -22,10 +22,15 @@ module.exports = {
         extend: {
             gridTemplateColumns: {
                 nav: '1fr auto 1fr',
+                footer: 'minmax(auto, 370px) repeat(4, minmax(auto, 170px))',
             },
             colors: {
                 white: {
                     DEFAULT: 'rgb(var(--white) / <alpha-value>)',
+                },
+                gray: {
+                    DEFAULT: 'rgb(var(--gray) / <alpha-value>)',
+                    light: 'rgb(var(--gray-light) / <alpha-value>)',
                 },
                 blue: {
                     DEFAULT: 'rgb(var(--blue) / <alpha-value>)',
@@ -35,6 +40,9 @@ module.exports = {
                     DEFAULT: 'rgb(var(--black) / <alpha-value>)',
                     dark: 'rgb(var(--black-dark) / <alpha-value>)',
                     light: 'rgb(var(--black-light) / <alpha-value>)',
+                },
+                red: {
+                    DEFAULT: 'rgb(var(--red) / <alpha-value>)',
                 },
             },
             maxWidth: {

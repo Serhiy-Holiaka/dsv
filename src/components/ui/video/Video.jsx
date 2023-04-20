@@ -30,14 +30,15 @@ const Video = ({ sourcesList, ...rest }) => {
                 ref={videoRef}
                 preload="metadata"
                 onClick={handlePlayStop}
-                className="absolute top-0 left-0 bottom-0 right-0 w-full h-full object-cover"
+                className="absolute top-0 left-0 bottom-0 right-0 w-full h-full object-cover rounded-2xl"
                 {...rest}
             >
                 {sourcesList && sourcesList.map((item, i) => <source key={i} src={item.src} type={item.type} />)}
                 Your browser is not suported!
             </video>
+            <div className="absolute w-full h-full bg-gradient-to-b from-black-dark/90 from-0% to-black-dark/10 to-50% z-[2]" />
             <button
-                className="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 flex items-center justify-center w-[98px] h-[98px] rounded-full bg-black-dark/70 [&_svg]:hover:scale-110 [&_svg]:active:scale-100 transition duration-200"
+                className="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 flex items-center justify-center w-[98px] h-[98px] rounded-full bg-black-dark/70 [&_svg]:hover:scale-110 [&_svg]:active:scale-100 transition duration-200 z-[3]"
                 onClick={handlePlayStop}
             >
                 {isPlay ? <PauseIcon className="w-7 h-7 transition-transform duration-200" /> : <PlayIcon className="transition-transform duration-200" />}

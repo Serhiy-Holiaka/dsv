@@ -5,4 +5,8 @@
     --white: 255 255 255; /*#ffffff*/
     --blue: 56 124 255; /*#387CFF*/
     --blue-dark: 9 38 96; /*#092660*/
+    --gray: 166 166 166; /*#a6a6a6*/
+    --gray-light: 231 231 231; /*#E7E7E7*/
+    --red: 207 44 30; /*#cf2c1e*/
+    --transition: 0.25s;
 }

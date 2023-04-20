@@ -20,6 +20,7 @@
         "lint": "npm run lint:eslint && npm run lint:stylelint && npm run lint:prettier"
     },
     "dependencies": {
+        "clsx": "^1.2.1",
         "framer-motion": "^10.11.6",
         "localforage": "^1.10.0",
         "match-sorter": "^6.3.1",
@@ -27,6 +28,7 @@
         "react-dom": "^18.2.0",
         "react-hook-form": "^7.43.9",
         "react-router-dom": "^6.9.0",
+        "react-select": "^5.7.2",
         "sort-by": "^0.0.2",
         "swiper": "^9.1.1"
     },

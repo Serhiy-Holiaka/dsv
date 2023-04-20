@@ -33,7 +33,7 @@ const Input = forwardRef(
         };
 
         return (
-            <div className={`relative min-w-0 ${additionalClasses}`}>
+            <div className={`relative w-full min-w-0 ${additionalClasses}`}>
                 {label && (
                     <label
                         htmlFor={id}
@@ -46,9 +46,9 @@ const Input = forwardRef(
                     </label>
                 )}
                 <input
-                    className={`outline-none w-full font-regular text-[15px] leading-[130%] text-black-dark border border-black-dark border-opacity-25 hover:border-blue-light focus:border-blue-light ${
+                    className={`outline-none w-full font-regular text-[15px] leading-[130%] text-black-dark placeholder:text-gray border border-gray-light rounded-lg hover:border-blue focus:border-blue ${
                         error && '!border-red'
-                    } py-[15px] px-4 transition-all duration-250`}
+                    } py-4 px-4 transition-all duration-250`}
                     id={id}
                     type={type}
                     name={name}

@@ -59,9 +59,9 @@ const LanguageMenu = ({ menuId, langList = LANGUAGE_LIST }) => {
                             opacity: 0,
                             transition: { type: 'linear', duration: 0.15 },
                         }}
-                        className="absolute top-[35px] -right-[50px] z-[5] min-w-[117px] rounded-lg bg-white shadow-lg"
+                        className="absolute top-[35px] -right-[50px] z-[5] min-w-[117px] rounded-lg bg-white py-2 shadow-md"
                     >
-                        <ul className="relative before:absolute before:-top-[3px] before:right-[53px] before:rotate-45 before:w-3 before:h-3 before:bg-white z-[5]">
+                        <ul className="relative before:absolute before:-top-[11px] before:right-[53px] before:rotate-45 before:w-3 before:h-3 before:bg-white z-[5]">
                             {langList.map(({ id, title, icon: Icon }, i) => (
                                 <li key={i}>
                                     <button

@@ -63,21 +63,21 @@ const SearchButton = ({ menuId }) => {
                             opacity: 0,
                             transition: { type: 'linear', duration: 0.15 },
                         }}
-                        className="absolute top-[35px] -right-[103px] z-[5] w-[490px] rounded-lg py-8 px-[30px] bg-white shadow-md"
+                        className="absolute top-[35px] -right-[103px] z-[5] w-[490px] rounded-lg py-7 px-7 bg-white shadow-md"
                     >
                         <div className="relativew-0 h-0 before:absolute before:-top-[3px] before:right-[107px] before:rotate-45 before:w-3 before:h-3 before:bg-white" />
-                        <h6 className="font-medium text-2xl text-black-dark mb-8">Search</h6>
                         <form onSubmit={handleSubmit(onSubmit)} className="w-full" noValidate>
-                            <div className="mb-6">
+                            <div className="flex">
                                 <Input
                                     id="search"
                                     placeholder="Type your request"
                                     error={errors.search ? true : false}
                                     helperText={errors.search && 'Field is required!'}
+                                    additionalClasses="[&>input]:rounded-r-none"
                                     {...register('search', { required: true })}
                                 />
+                                <Button additionalClasses="rounded-l-none px-10" type="submit">Search</Button>
                             </div>
-                            <Button type="submit">Search</Button>
                         </form>
                     </motion.div>
                 )}

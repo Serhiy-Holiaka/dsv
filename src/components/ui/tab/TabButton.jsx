@@ -12,7 +12,7 @@ const TabButton = ({ children, isActive, onClick, additionalClasses }) => {
 
 
     return (
-        <button className={`is-clickable font-medium text-[15px] text-black-dark ${isActive ? 'text-opacity-100 underline decoration-[#FF0000] underline-offset-8' : 'text-opacity-70'} uppercase hover:text-opacity-100 transition-all ${additionalClasses}`} onClick={handleClick}>
+        <button className={`is-clickable font-bold text-base rounded-t-lg ${isActive ? 'text-black-dark bg-white' : 'text-white bg-black-light'} transition-all overflow-hidden ${additionalClasses}`} onClick={handleClick}>
             {children}
         </button>
     );
