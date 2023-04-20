@@ -1,0 +1,19 @@
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import eslint from 'vite-plugin-eslint';
+
+// https://vitejs.dev/config/
+
+export default defineConfig(({ mode }) => {
+    const buildType = mode === 'production' ? '/dsv/' : '/';
+    return {
+        server: {
+            port: 3000,
+        },
+        base: buildType,
+        plugins: [react(), eslint()],
+        resolve: {
+            alias: [{ find: '@', replacement: '/src' }],
+        },
+    }
+});
