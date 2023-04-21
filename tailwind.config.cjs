@@ -24,6 +24,9 @@ module.exports = {
                 nav: '1fr auto 1fr',
                 footer: 'minmax(auto, 370px) repeat(4, minmax(auto, 170px))',
             },
+            backgroundImage: {
+                'numbers-bg': 'url("/src/assets/images/world-map.webp")',
+            },
             colors: {
                 white: {
                     DEFAULT: 'rgb(var(--white) / <alpha-value>)',

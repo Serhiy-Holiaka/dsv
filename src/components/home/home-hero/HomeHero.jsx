@@ -2,6 +2,7 @@ import Button from '@/components/ui/button';
 import Video from '@/components/ui/video';
 import videoHero from '@/assets/video/hero-video.mp4';
 import videoHeroPoster from '@/assets/video/hero-video-poster.webp';
+import ArrowIcon from '@/components/ui/icons/ArrowIcon';
 
 const videos = [
     {
@@ -27,8 +28,12 @@ const HomeHero = () => {
                 </p>
                 <Button additionalClasses="mx-auto">Explore our solutions</Button>
             </div>
-            <div className="absolute left-1/2 -translate-x-1/2 bottom-32 w-[1170px] h-[680px] z-[1]">
+            <div className="absolute left-1/2 -translate-x-1/2 bottom-32 w-full max-w-[80vw] xl:max-w-[61vw] h-[680px] z-[1]">
                 <Video sourcesList={videos} poster={videoHeroPoster} loop />
+            </div>
+            <div className="absolute left-0 bottom-[20%] w-[119px] flex items-center rotate-90">
+                <p className="font-regular text-white leading-none mr-4 -rotate-180">Scroll down</p>
+                <ArrowIcon className="-rotate-90" />
             </div>
         </section>
     );
