@@ -2,6 +2,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Layout from '@/components/layout';
 import Home from '@/pages/Home';
 import WhyDsv from '@/pages/WhyDsv';
+import OurSolutions from '@/pages/OurSolutions';
 
 const App = () => {
     const basePath = import.meta.env.PROD ? '/dsv/' : '/';
@@ -18,6 +19,10 @@ const App = () => {
                     {
                         path: 'why-dsv',
                         element: <WhyDsv />,
+                    },
+                    {
+                        path: 'solutions',
+                        element: <OurSolutions />,
                     },
                 ],
             },
