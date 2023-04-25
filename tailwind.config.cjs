@@ -23,6 +23,8 @@ module.exports = {
             gridTemplateColumns: {
                 nav: '1fr auto 1fr',
                 footer: 'minmax(auto, 370px) repeat(4, minmax(auto, 170px))',
+                news: 'minmax(auto, 720px) minmax(auto, 1020px)',
+                'news-card': '270px auto',
             },
             backgroundImage: {
                 'numbers-bg': 'url("/src/assets/images/world-map.webp")',

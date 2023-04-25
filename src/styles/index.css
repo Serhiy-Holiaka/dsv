@@ -72,6 +72,32 @@
     box-sizing: content-box;
 }
 
+.swiper-button-disabled,
+.swiper-button-disabled:hover {
+    background-color: rgb(var(--black-light) / 0.5) !important;
+    cursor: not-allowed;
+}
+
+.swiper-horizontal>.swiper-scrollbar, .swiper-scrollbar.swiper-scrollbar-horizontal {
+    max-width: 570px;
+    height: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.swiper-scrollbar-drag {
+    background-color: rgb(var(--black-dark));
+}
+
+.swiper-slide {
+    max-width: 970px !important;
+}
+
+.swiper-slide-custom-next,
+.swiper-slide-custom-prev {
+    opacity: 0.3;
+}
+
 @keyframes slidein {
     0% {
         opacity: 0;
