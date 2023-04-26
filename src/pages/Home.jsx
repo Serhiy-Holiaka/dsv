@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import HomeHero from '@/components/home/home-hero';
+import { SwiperSlide } from 'swiper/react';
 import TabsPane from '@/components/tabs-pane';
 import AnyQuestions from '@/components/blocks/any-questions';
 import questionsImg from '@/assets/images/questions-men-1.webp';
@@ -10,7 +11,8 @@ import Button from '@/components/ui/button';
 import ArrowIcon from '@/components/ui/icons/ArrowIcon';
 import CardsSwiper from '@/components/cards-swiper';
 import TestimonialsSwiper from '@/components/testimonials-swiper';
-import { SELF_SERVICES, LATEST_NEWS } from '@/constants/home.constants';
+import NewsCard from '@/components/cards-swiper/news-card';
+import { SELF_SERVICES, LATEST_NEWS, BENEFITS_LIST } from '@/constants/home.constants';
 
 const Home = () => {
     return (
@@ -47,7 +49,13 @@ const Home = () => {
                 <h5 className="font-bold text-[42px] leading-[130%] text-black-dark text-center max-w-[770px] mx-auto">
                     Whatever your industry, we are your global freight forwarder
                 </h5>
-                <CardsSwiper />
+                <CardsSwiper>
+                    {BENEFITS_LIST.map(({ icon: Icon, title, descr }, i) => (
+                        <SwiperSlide className="h-auto" key={i}>
+                            <NewsCard icon={<Icon />} title={title} descr={descr} />
+                        </SwiperSlide>
+                    ))}
+                </CardsSwiper>
                 <h6 className="font-bold text-2xl text-black-dark text-center mb-8">In a different industry?</h6>
                 <Button additionalClasses="mx-auto">Show more news</Button>
             </section>
@@ -154,7 +162,13 @@ const Home = () => {
                 </div>
                 <Button additionalClasses="mx-auto mt-14">See our tailor-made solutions</Button>
             </section>
-            <LearnAbout />
+            <section className="py-16">
+                <h5 className="font-bold text-[42px] leading-[130%] text-black-dark text-center mb-16">
+                    Learn about transport and logistics
+                </h5>
+                <LearnAbout />
+                <Button additionalClasses="mt-12 mx-auto">Explore our insights</Button>
+            </section>
             <Numbers />
             <AnyQuestions
                 question="Any questions?"

@@ -1,13 +1,13 @@
 import { memo, useRef } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import PropTypes from 'prop-types';
+import { Swiper } from 'swiper/react';
 import { Navigation, A11y } from 'swiper';
 import ArrowIcon from '@/components/ui/icons/ArrowIcon';
-import NewsCard from '@/components/cards-swiper/news-card';
-import { BENEFITS_LIST } from '@/constants/home.constants';
+
 import 'swiper/css';
 import 'swiper/css/navigation';
 
-const CardsSwiper = () => {
+const CardsSwiper = ({ children }) => {
     const swiperRef = useRef(null);
     const navigationPrevRef = useRef(null);
     const navigationNextRef = useRef(null);
@@ -48,11 +48,7 @@ const CardsSwiper = () => {
                 }}
                 className="h-full py-16"
             >
-                {BENEFITS_LIST.map(({ icon: Icon, title, descr }, i) => (
-                    <SwiperSlide className="h-auto" key={i}>
-                        <NewsCard icon={<Icon />} title={title} descr={descr} />
-                    </SwiperSlide>
-                ))}
+                {children}
             </Swiper>
             <div className="pl-4 xl:pl-[70px]">
                 <button
@@ -65,6 +61,10 @@ const CardsSwiper = () => {
             </div>
         </div>
     );
+};
+
+CardsSwiper.propTypes = {
+    children: PropTypes.oneOfType([PropTypes.element, PropTypes.node]),
 };
 
 export default memo(CardsSwiper);
