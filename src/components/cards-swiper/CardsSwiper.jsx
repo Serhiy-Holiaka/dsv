@@ -1,9 +1,9 @@
-import { memo, useRef } from 'react';
+import { memo, useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { Swiper } from 'swiper/react';
 import { Navigation, A11y } from 'swiper';
 import ArrowIcon from '@/components/ui/icons/ArrowIcon';
-
+import { useIsClient } from '@/hooks/useIsClient';
 import 'swiper/css';
 import 'swiper/css/navigation';
 
@@ -11,6 +11,17 @@ const CardsSwiper = ({ children }) => {
     const swiperRef = useRef(null);
     const navigationPrevRef = useRef(null);
     const navigationNextRef = useRef(null);
+    const isClient = useIsClient();
+
+    useEffect(() => {
+        if (!isClient && !swiperRef.current) {
+            return;
+        }
+
+        const { current } = swiperRef;
+
+        current?.update();
+    }, [isClient, swiperRef]);
 
     const onBeforeInit = Swiper => {
         if (typeof Swiper.params.navigation !== 'boolean') {
@@ -38,6 +49,14 @@ const CardsSwiper = ({ children }) => {
                 spaceBetween={30}
                 loop={false}
                 onBeforeInit={onBeforeInit}
+                onUpdate={swiper => {
+                    swiper.params.navigation.prevEl = navigationPrevRef.current;
+                    swiper.params.navigation.nextEl = navigationNextRef.current;
+                    swiper.navigation.destroy();
+                    swiper.navigation.init();
+                    swiper.navigation.update();
+                }}
+                onSwiper={swiper => (swiperRef.current = swiper)}
                 breakpoints={{
                     1500: {
                         slidesPerView: 4,

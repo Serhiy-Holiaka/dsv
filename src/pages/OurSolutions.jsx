@@ -57,7 +57,7 @@ const OurSolutions = () => {
                 </h5>
                 <div className="container max-w-mid grid grid-cols-2 gap-7">
                     <div>
-                        <div className="relative h-[320px]">
+                        <div className="relative h-[320px] rounded-2xl overflow-hidden">
                             <img
                                 className="absolute w-full h-full object-cover"
                                 width={570}
@@ -80,7 +80,7 @@ const OurSolutions = () => {
                         </div>
                     </div>
                     <div>
-                        <div className="relative h-[320px]">
+                        <div className="relative h-[320px] rounded-2xl overflow-hidden">
                             <img
                                 className="absolute w-full h-full object-cover"
                                 width={570}
