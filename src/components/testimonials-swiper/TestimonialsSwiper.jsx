@@ -24,7 +24,7 @@ const TestimonialsSwiper = () => {
                     dragSize: 170,
                 }}
                 loop={false}
-                className="h-full py-16"
+                className="h-full !py-16"
             >
                 {TESTIMONIALS_LIST.map(({ comment, name }, i) => (
                     <SwiperSlide className="h-auto" key={i}>

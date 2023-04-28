@@ -68,7 +68,7 @@ const Sustainability = () => {
                 <h5 className="font-bold text-[42px] leading-[130%] text-black-dark text-center max-w-[770px] mx-auto">
                     Read more about how we work with sustainability
                 </h5>
-                <p className="font-regular text-base leading-[150%] text-black-dark text-center max-w-[770px] mx-auto mt-8">
+                <p className="font-regular text-base leading-[150%] text-black-dark text-center max-w-[770px] mx-auto mt-8 mb-16">
                     To turn our words into actions that can have an impact on our planet, we work with sustainability
                     across all areas of our business, from air, sea and road freight to contract logistic
                 </p>
@@ -79,7 +79,7 @@ const Sustainability = () => {
                         </SwiperSlide>
                     ))}
                 </CardsSwiper>
-                <h6 className="font-bold text-2xl text-black-dark text-center max-w-[870px] mx-auto mb-8">
+                <h6 className="font-bold text-2xl text-black-dark text-center max-w-[870px] mx-auto mb-8 mt-16">
                     We continuously work with sustainability across all areas of our business, from air, sea and road
                     freight to contract logistics.
                 </h6>

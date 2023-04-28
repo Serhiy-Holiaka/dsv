@@ -48,7 +48,7 @@ const Support = () => {
                 </div>
             </section>
             <section className="py-16">
-                <h5 className="font-bold text-[42px] leading-[130%] text-black-dark text-center max-w-[770px] mx-auto">
+                <h5 className="font-bold text-[42px] leading-[130%] text-black-dark text-center max-w-[770px] mx-auto mb-16">
                     Popular help topics
                 </h5>
                 <CardsSwiper>
@@ -58,7 +58,7 @@ const Support = () => {
                         </SwiperSlide>
                     ))}
                 </CardsSwiper>
-                <h6 className="font-bold text-2xl text-black-dark text-center mb-8">Do you have other questions?</h6>
+                <h6 className="font-bold text-2xl text-black-dark text-center mb-8 mt-16">Do you have other questions?</h6>
                 <Button additionalClasses="mx-auto">Read our FAQs</Button>
             </section>
             <section className="py-16">

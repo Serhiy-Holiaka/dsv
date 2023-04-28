@@ -79,10 +79,10 @@
 }
 
 .swiper-horizontal>.swiper-scrollbar, .swiper-scrollbar.swiper-scrollbar-horizontal {
-    max-width: 570px;
-    height: 2px;
-    left: 50%;
-    transform: translateX(-50%);
+    max-width: 570px !important;
+    height: 2px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
 }
 
 .swiper-scrollbar-drag {

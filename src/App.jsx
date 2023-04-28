@@ -1,13 +1,17 @@
+import { Suspense, lazy } from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Layout from '@/components/layout';
-import Home from '@/pages/Home';
-import WhyDsv from '@/pages/WhyDsv';
-import OurSolutions from '@/pages/OurSolutions';
-import Insights from '@/pages/Insights';
-import Sustainability from '@/pages/Sustainability';
-import Careers from '@/pages/Careers';
-import About from '@/pages/About';
-import Support from '@/pages/Support';
+import Loading from '@/components/loading';
+
+const Home = lazy(() => import('@/pages/Home'));
+
+const WhyDsv = lazy(() => import('@/pages/WhyDsv'));
+const OurSolutions = lazy(() => import('@/pages/OurSolutions'));
+const Insights = lazy(() => import('@/pages/Insights'));
+const Sustainability = lazy(() => import('@/pages/Sustainability'));
+const Careers = lazy(() => import('@/pages/Careers'));
+const About = lazy(() => import('@/pages/About'));
+const Support = lazy(() => import('@/pages/Support'));
 
 const App = () => {
     const basePath = import.meta.env.PROD ? '/dsv/' : '/';
@@ -19,35 +23,67 @@ const App = () => {
                 children: [
                     {
                         index: true,
-                        element: <Home />,
+                        element: (
+                            <Suspense fallback={<Loading additionalClasses="my-auto" />}>
+                                <Home />
+                            </Suspense>
+                        ),
                     },
                     {
                         path: 'why-dsv',
-                        element: <WhyDsv />,
+                        element: (
+                            <Suspense fallback={<Loading additionalClasses="my-auto" />}>
+                                <WhyDsv />
+                            </Suspense>
+                        ),
                     },
                     {
                         path: 'solutions',
-                        element: <OurSolutions />,
+                        element: (
+                            <Suspense fallback={<Loading additionalClasses="my-auto" />}>
+                                <OurSolutions />
+                            </Suspense>
+                        ),
                     },
                     {
                         path: 'insights',
-                        element: <Insights />,
+                        element: (
+                            <Suspense fallback={<Loading additionalClasses="my-auto" />}>
+                                <Insights />
+                            </Suspense>
+                        ),
                     },
                     {
                         path: 'sustainabillity',
-                        element: <Sustainability />,
+                        element: (
+                            <Suspense fallback={<Loading additionalClasses="my-auto" />}>
+                                <Sustainability />
+                            </Suspense>
+                        ),
                     },
                     {
                         path: 'careers',
-                        element: <Careers />,
+                        element: (
+                            <Suspense fallback={<Loading additionalClasses="my-auto" />}>
+                                <Careers />
+                            </Suspense>
+                        ),
                     },
                     {
                         path: 'about',
-                        element: <About />,
+                        element: (
+                            <Suspense fallback={<Loading additionalClasses="my-auto" />}>
+                                <About />
+                            </Suspense>
+                        ),
                     },
                     {
                         path: 'support',
-                        element: <Support />,
+                        element: (
+                            <Suspense fallback={<Loading additionalClasses="my-auto" />}>
+                                <Support />
+                            </Suspense>
+                        ),
                     },
                 ],
             },

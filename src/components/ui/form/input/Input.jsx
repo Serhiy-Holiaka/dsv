@@ -46,7 +46,7 @@ const Input = forwardRef(
                     </label>
                 )}
                 <input
-                    className={`outline-none w-full font-regular text-[15px] leading-[130%] text-black-dark placeholder:text-gray border border-gray-light rounded-lg hover:border-blue focus:border-blue ${
+                    className={`outline-none w-full h-[52px] font-regular text-[15px] leading-[130%] text-black-dark placeholder:text-gray border border-gray-light rounded-lg hover:border-blue focus:border-blue ${
                         error && '!border-red'
                     } py-4 px-4 transition-all duration-250`}
                     id={id}

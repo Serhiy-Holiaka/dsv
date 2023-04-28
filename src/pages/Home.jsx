@@ -46,7 +46,7 @@ const Home = () => {
                 </div>
             </section>
             <section className="py-16">
-                <h5 className="font-bold text-[42px] leading-[130%] text-black-dark text-center max-w-[770px] mx-auto">
+                <h5 className="font-bold text-[42px] leading-[130%] text-black-dark text-center max-w-[770px] mx-auto mb-16">
                     Whatever your industry, we are your global freight forwarder
                 </h5>
                 <CardsSwiper>
@@ -56,7 +56,7 @@ const Home = () => {
                         </SwiperSlide>
                     ))}
                 </CardsSwiper>
-                <h6 className="font-bold text-2xl text-black-dark text-center mb-8">In a different industry?</h6>
+                <h6 className="font-bold text-2xl text-black-dark text-center mb-8 mt-16">In a different industry?</h6>
                 <Button additionalClasses="mx-auto">Show more news</Button>
             </section>
             <section className="py-16">
